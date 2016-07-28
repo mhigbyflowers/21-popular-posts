@@ -5,3 +5,9 @@
 // @import 'font-awesome';
 @import 'box-sizing';
 @import 'adonis';
+.welcome-container{
+  &__inner{
+    max-width: 60rem;
+    margin: auto;
+  }
+}

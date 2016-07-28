@@ -15,20 +15,21 @@
 
   <section>
     <div class="__wrapper">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Popular Posts</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="sass.html">Sass</a></li>
+            <li><a href="badges.html">Components</a></li>
+            <li><a href="collapsible.html">JavaScript</a></li>
+          </ul>
+        </div>
+      </nav>
       {% block content %}
       {% endblock %}
 
       {% block footer %}
-        <div class="__footer">
-          <ul>
-            <li>
-              <a href="https://twitter.com/intent/tweet?url=http://adonisjs.com&text=I am using AdonisJs, a practical MVC framework for nodejs&hashtags=nodejs,adonisframework" target="_blank"><img src="/assets/twitter.svg"></a>
-            </li>
-            <li>
-              <a href="https://github.com/adonisjs/adonis-framework" target="_blank"><img src="/assets/github.svg"></a>
-            </li>
-          </ul>
-        </div>
+
       {% endblock %}
     </div><!-- end wrapper -->
   </section>

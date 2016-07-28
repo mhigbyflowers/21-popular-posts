@@ -96,3 +96,7 @@ body {
 
 .__footer li a:hover {
   opacity: 1; }
+
+.welcome-container__inner {
+  max-width: 60rem;
+  margin: auto; }
