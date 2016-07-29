@@ -25,6 +25,17 @@
           </ul>
         </div>
       </nav>
+      <div class="app__main">
+      {% if old('error') %}
+
+              <h1>  Warning: {{ old('error') }}</h1>
+
+      {% endif %}
+
+      {% if old('success') %}
+              <h1> Success: {{ old('success') }} </h1>
+      {% endif %}
+
       {% block content %}
       {% endblock %}
 </div>
