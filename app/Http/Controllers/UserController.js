@@ -12,7 +12,7 @@ class UserController {
   * store(request, response) {
       const { username, email, password } = request.all();
       try {
-    yield User.create({ email, password: yield Hash.make(password) });
+    yield User.create({username, email, password: yield Hash.make(password) });
 
     // Send success message
     yield request.with({ success: 'User created!' })
@@ -34,21 +34,7 @@ class UserController {
   }
   }
 
-  * show(request, response) {
-    //
-  }
 
-  * edit(request, response) {
-    //
-  }
-
-  * update(request, response) {
-    //
-  }
-
-  * destroy(request, response) {
-    //
-  }
 
 }
 
