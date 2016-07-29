@@ -17,6 +17,13 @@
 
 const Route = use('Route');
 
-Route.on('/').render('welcome')
-Route.get('/contact', function*(req, res) {
-})
+Route.on('/').render('welcome');
+
+Route.get('/register', 'UserController.create');
+Route.post('/register', 'UserController.store');
+// Route.get('/register', function * (req, res) {
+//   yield res.sendView('register');
+// });
+Route.get('/login', function * (req, res) {
+  yield res.sendView('login');
+});
