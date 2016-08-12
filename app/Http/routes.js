@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 /*
 |--------------------------------------------------------------------------
@@ -28,9 +28,8 @@ Route.any('/logout', 'SessionController.destroy');
 
 Route.group('logged-in', () => {
   Route.resource('/posts', 'PostController');
-    Route.resource('/posts/create', 'PostController.create');
-    Route.post('/posts/create', 'PostController.store');
+  Route.resource('/posts/create', 'PostController.create');
+  Route.post('/posts/create', 'PostController.store');
 
   // Route.resource('/posts', 'PostController.create');
-
-})
+}).middleware('auth');

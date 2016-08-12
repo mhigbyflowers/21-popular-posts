@@ -5,9 +5,8 @@ const Post = use('App/Model/Post');
 class PostController {
 
   * index(request, response) {
-    const post = yield Post.with('user').fetch();
-
-    yield response.sendView('post.index');
+    const posts = yield Post.with('user').fetch();
+    yield response.sendView('post.index', { posts: posts.toJSON() });
   }
 
   * create(request, response) {
@@ -15,13 +14,35 @@ class PostController {
   }
 
   * store(request, response) {
-    const {title, post } = request.all();
+    const { title, post } = request.all();
 
-    yield request.authUser.posts().create({title, post });
 
-    yield request.with({ success: 'New post listed!' }).flash();
+    // yield request.authUser.posts().create({ title, post, user_id });
+
+    // yield Post.create({ title, post, user_id });
+    yield request.authUser.posts()
+    .create({ title, post });
+
+    yield request.with({ success: 'New post is now listed!' }).flash();
 
     response.redirect('/posts');
+  }
+
+
+  * show(request, response) {
+    //
+  }
+
+  * edit(request, response) {
+    //
+  }
+
+  * update(request, response) {
+    //
+  }
+
+  * destroy(request, response) {
+    //
   }
 
 }
