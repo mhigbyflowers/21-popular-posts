@@ -1,0 +1,70 @@
+// @import 'yoga';
+// @import 'normalize';
+
+// $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
+// @import 'font-awesome';
+@import 'box-sizing';
+@import 'adonis';
+body{
+
+
+// background: red;
+}
+section{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+.footer{
+  position: fixed;
+  width: 100%;
+  bottom:0;
+  display: flex;
+}
+.logout{
+  text-align: right;
+  font-size: 2rem;
+
+color: white;
+&:hover{
+  color:red;
+}
+}
+.logout-container{
+  width: 100vw;
+  padding:1rem;
+  display: flex;
+justify-content: space-between;
+
+}
+.likes{
+
+  display: flex;
+  flex-direction: column;
+}
+.collection-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+
+}
+.collection-item > *{
+  // border: black solid 1px;
+  width: 100rem;
+}
+.title{
+width: 100rem;
+  font-size: 2rem;
+}
+.secondary-content{
+  text-align: right;
+}
+.user{
+  color:#a2a2a2;
+  font-size: .7rem;
+  font-weight: lighter;
+  margin-top: .5rem;
+
+}

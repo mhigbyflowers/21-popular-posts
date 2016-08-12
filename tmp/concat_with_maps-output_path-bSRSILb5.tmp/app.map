@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"sourcesContent":["define('index', ['exports'], function (exports) {\n  'use strict';\n  console.log('Hellow');\n});"],"names":[],"mappings":"AAAA;AACA;AACA;","file":"app.js"}
